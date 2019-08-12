@@ -9,8 +9,7 @@
 *.obj
 *.pdb
 *.pyc
-/.vs
-/build/
-/builds/
-/venv/
-/OutFile/
+build/
+builds/
+venv/
+OutFile/

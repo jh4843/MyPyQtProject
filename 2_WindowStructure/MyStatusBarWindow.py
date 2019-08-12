@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit, QStatusBar
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit, QStatusBar, QLabel
 
 class MyApp(QMainWindow):
 
@@ -30,6 +30,7 @@ class MyApp(QMainWindow):
     ## lineedit 의 Text가 변경되었을때, 호출되는 함수를 정의
     def lineeditTextChanged(self):
         self.statusBar.showMessage(self.lineEdit.text())
+
 
 if __name__ == '__main__':
 
