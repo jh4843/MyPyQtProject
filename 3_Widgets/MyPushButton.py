@@ -14,11 +14,13 @@ class MyApp(QWidget):
         ## Add Toggle Button
         btn1 = QPushButton('&Button1', self)
         btn1.setCheckable(True)
+        btn1.setMinimumSize(100, 50)        ## set Minimum size width = 100, height = 50
         btn1.toggle()
 
         ## Add QPushButton having clicked event
         btn2 = QPushButton(self)
         btn2.setText('Button&2')
+        btn2.setMinimumSize(150, 100)       ## set Minimum size width = 150, height = 100
         btn2.clicked.connect(self.btn2_clicked)
 
         ## Add disabled button
@@ -33,7 +35,7 @@ class MyApp(QWidget):
 
         self.setLayout(vbox)
         self.setWindowTitle('My PushButtons')
-        self.setGeometry(300, 300, 300, 200)
+        self.setGeometry(500, 500, 300, 200)
         self.show()
 
     def btn2_clicked(self):
