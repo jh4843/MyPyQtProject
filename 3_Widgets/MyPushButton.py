@@ -38,7 +38,7 @@ class MyApp(QWidget):
                              QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if msgboxReply == QMessageBox.Yes:
-            msgboxInfo = QMessageBox()
+            msgboxInfo = QMessageBox(self)
             msgboxInfo.setText("Me too")
             msgboxInfo.exec()
 
