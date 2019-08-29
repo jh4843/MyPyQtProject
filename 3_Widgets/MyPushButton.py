@@ -11,16 +11,21 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
+        ## Add Toggle Button
         btn1 = QPushButton('&Button1', self)
         btn1.setCheckable(True)
         btn1.toggle()
 
+        ## Add QPushButton having clicked event
         btn2 = QPushButton(self)
         btn2.setText('Button&2')
+        btn2.clicked.connect(self.btn2_clicked)
 
+        ## Add disabled button
         btn3 = QPushButton('Button3', self)
         btn3.setEnabled(False)
 
+        ## Align buttons vertically
         vbox = QVBoxLayout()
         vbox.addWidget(btn1)
         vbox.addWidget(btn2)
@@ -30,8 +35,6 @@ class MyApp(QWidget):
         self.setWindowTitle('My PushButtons')
         self.setGeometry(300, 300, 300, 200)
         self.show()
-
-        btn2.clicked.connect(self.btn2_clicked)
 
     def btn2_clicked(self):
         msgboxReply = QMessageBox.question(self, 'Message', 'Do you like me?',
