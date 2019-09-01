@@ -34,7 +34,7 @@ class MyApp(QWidget):
         vbox.addWidget(btn3)
 
         self.setLayout(vbox)
-        self.setWindowTitle('My PushButtons')
+        self.setWindowTitle('My CheckBox')
         self.setGeometry(500, 500, 300, 200)
         self.show()
 
